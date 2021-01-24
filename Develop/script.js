@@ -1,1 +1,4 @@
-var currDT = moment().format('MMMM Do YYYY, h:mm:ss a');
+var currDT = moment().format("MMM Do YY");
+
+$("#currentDay").text(currDT);
+// currDTEl.textContent = currDT;
