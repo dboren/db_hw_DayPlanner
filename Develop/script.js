@@ -25,4 +25,4 @@ function init() {
 
 init();
 
-$(".saveBtn").click(saveEntry);
+$("#sv11").click(saveEntry);
