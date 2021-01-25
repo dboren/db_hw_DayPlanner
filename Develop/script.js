@@ -1,18 +1,28 @@
 var currDT = moment().format("MMM Do YY");
 
+var entry;
+
 
 
 $("#currentDay").text(currDT);
 
 function saveEntry() {
-    var entry = $("#11AM-text").val();
+    entry = $("#11AM-text").val();
     console.log(entry);
     localStorage.setItem("entry", entry);
 
 }
 
 
-function renderEntry {
+function renderEntry() {
+    entry = localStorage.getItem("entry")
+    $("#11AM-text").text(entry);
 }
+
+function init() {
+    renderEntry();
+}
+
+init();
 
 $(".saveBtn").click(saveEntry);
