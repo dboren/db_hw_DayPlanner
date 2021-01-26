@@ -10,12 +10,16 @@ var entry3;
 var entry4;
 var entry5;
 
-var currentHour = new Date();
-document.getElementById("9AM-text").innerHTML = currentHour.getHours();
+var JSDate = new Date();
+// document.getElementById("9AM-text").innerHTML = currentHour.getHours();
 
-console.log("Current hour:" + currentHour);
+console.log("Current hour: " + JSDate);
 
+currentHour = JSDate.getHours();
 
+console.log("Converted hour: " + currentHour);
+
+console.log(typeof currentHour);
 
 $("#currentDay").text(currDT);
 
