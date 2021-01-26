@@ -10,6 +10,16 @@ var entry3;
 var entry4;
 var entry5;
 
+var cell9 = $("#9AM-text");
+var cell10 = $("#10AM-text");
+var cell11 = $("#11AM-text");
+var cell12 = $("#12PM-text");
+var cell1 = $("#1PM-text");
+var cell2 = $("#2PM-text");
+var cell3 = $("#3PM-text");
+var cell4 = $("#4PM-text");
+var cell5 = $("#5PM-text");
+
 var JSDate = new Date();
 // document.getElementById("9AM-text").innerHTML = currentHour.getHours();
 
@@ -155,6 +165,16 @@ function renderEntry5() {
     console.log("Stored entry 5: " + priorEntry5);
 
 }
+
+//Color change function
+
+// function setColor {
+//     if (data-TimeRanges.value = currentHour) {
+//         $
+//     }
+// }
+
+
 function init() {
     renderEntry9();
     renderEntry10();
