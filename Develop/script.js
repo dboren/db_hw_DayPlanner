@@ -169,11 +169,11 @@ function renderEntry5() {
 // Color change function
 
 function setColor(cell) {
-    if (cell.data-time.value == currentHour) {
+    if (cell["data-time"] == currentHour) {
         cell10.setAttribute("class", ".present")
-    } else if (cell.data-time.value < currentHour) {
+    } else if (cell["data-time"] < currentHour) {
         cell10.setAttribute("class", ".future");
-    } else if (cell.data-time.value > currentHour) {
+    } else if (cell["data-time"] > currentHour) {
         cell10.setAttribute("class", ".past");
     }
 };
