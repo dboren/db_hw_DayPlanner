@@ -210,8 +210,8 @@ function init() {
 init();
 
 // console.log("Present status: " + cell10["data-time"] == currentHour);
-console.log(cell10['data-time']);
-console.log(cell10.id);
+console.log($(cell10).attr("data-time"));
+console.log($(cell10).attr("id"));
 console.log(cell10);
 
 // var hrCode10 = (cell10['data-time']);
