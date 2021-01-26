@@ -10,6 +10,11 @@ var entry3;
 var entry4;
 var entry5;
 
+var currentHour = new Date();
+document.getElementById("9AM-text").innerHTML = currentHour.getHours();
+
+console.log("Current hour:" + currentHour);
+
 
 
 $("#currentDay").text(currDT);
@@ -92,7 +97,7 @@ function renderEntry9() {
 
 function renderEntry10() {
         priorEntry10 = localStorage.getItem("10AM entry");
-        $("#10AM-text").text(priorEntry9);
+        $("#10AM-text").text(priorEntry10);
         console.log("Stored entry 10: " + priorEntry10);
     
 }
