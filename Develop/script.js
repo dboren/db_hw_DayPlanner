@@ -181,13 +181,14 @@ function renderEntry5() {
 function setColor() {
     if (cell10["data-time"] == currentHour) {
         cell10.classList.add("present");
-        console.log(cell10["data-time"] == currentHour)
+        // console.log("Present status: " + cell10["data-time"] == currentHour)
+        console.log(cell10["data-time"]);
     } else if (cell10["data-time"] < currentHour) {
         cell10.classList.add("future");
-        console.log(cell10["data-time"] < currentHour)
+        // console.log("Future status: " + cell10["data-time"] < currentHour)
     } else if (cell10["data-time"] > currentHour) {
         cell10.classList.add("past");
-        console.log(cell10["data-time"] > currentHour);
+        // console.log("Past status: " + cell10["data-time"] > currentHour);
     }
 };
 
@@ -207,6 +208,18 @@ function init() {
 }
 
 init();
+
+// console.log("Present status: " + cell10["data-time"] == currentHour);
+console.log(cell10['data-time']);
+console.log(cell10.id);
+console.log(cell10);
+
+// var hrCode10 = (cell10['data-time']);
+// console.log("hrCode10: " + hrCode10);
+
+// console.log("Future status: " + cell10["data-time"] < currentHour);
+
+// console.log("Past status: " + cell10["data-time"] > currentHour);
 
 $("#sv9").click(saveEntry9);
 $("#sv10").click(saveEntry10);
