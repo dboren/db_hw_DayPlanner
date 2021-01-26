@@ -166,13 +166,17 @@ function renderEntry5() {
 
 }
 
-//Color change function
+// Color change function
 
-// function setColor {
-//     if (data-TimeRanges.value = currentHour) {
-//         $
-//     }
-// }
+function setColor(cell) {
+    if (cell.data-time.value == currentHour) {
+        cell10.setAttribute("class", ".present")
+    } else if (cell.data-time.value < currentHour) {
+        cell10.setAttribute("class", ".future");
+    } else if (cell.data-time.value > currentHour) {
+        cell10.setAttribute("class", ".past");
+    }
+};
 
 
 function init() {
@@ -185,6 +189,8 @@ function init() {
     renderEntry3();
     renderEntry4();
     renderEntry5();
+
+    setColor(cell10);
 }
 
 init();
