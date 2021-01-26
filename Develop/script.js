@@ -168,13 +168,26 @@ function renderEntry5() {
 
 // Color change function
 
-function setColor(cell) {
-    if (cell["data-time"] == currentHour) {
-        cell10.setAttribute("class", ".present")
-    } else if (cell["data-time"] < currentHour) {
-        cell10.setAttribute("class", ".future");
-    } else if (cell["data-time"] > currentHour) {
-        cell10.setAttribute("class", ".past");
+// function setColor(cell) {
+//     if (cell["data-time"] == currentHour) {
+//         cell10.setAttribute("class", ".present")
+//     } else if (cell["data-time"] < currentHour) {
+//         cell10.setAttribute("class", ".future");
+//     } else if (cell["data-time"] > currentHour) {
+//         cell10.setAttribute("class", ".past");
+//     }
+// };
+
+function setColor() {
+    if (cell10["data-time"] == currentHour) {
+        cell10.classList.add("present");
+        console.log(cell10["data-time"] == currentHour)
+    } else if (cell10["data-time"] < currentHour) {
+        cell10.classList.add("future");
+        console.log(cell10["data-time"] < currentHour)
+    } else if (cell10["data-time"] > currentHour) {
+        cell10.classList.add("past");
+        console.log(cell10["data-time"] > currentHour);
     }
 };
 
@@ -190,7 +203,7 @@ function init() {
     renderEntry4();
     renderEntry5();
 
-    setColor(cell10);
+    setColor();
 }
 
 init();
