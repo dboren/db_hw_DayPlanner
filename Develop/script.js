@@ -30,6 +30,7 @@ currentHour = JSDate.getHours();
 console.log("Converted hour: " + currentHour);
 
 console.log(typeof currentHour);
+console.log(typeof $(cell10).attr("data-time"));
 
 $("#currentDay").text(currDT);
 
@@ -179,16 +180,14 @@ function renderEntry5() {
 // };
 
 function setColor() {
-    if (cell10["data-time"] == currentHour) {
+    if ($(cell10).attr("data-time") == currentHour) {
         cell10.classList.add("present");
-        // console.log("Present status: " + cell10["data-time"] == currentHour)
-        console.log(cell10["data-time"]);
-    } else if (cell10["data-time"] < currentHour) {
-        cell10.classList.add("future");
-        // console.log("Future status: " + cell10["data-time"] < currentHour)
-    } else if (cell10["data-time"] > currentHour) {
-        cell10.classList.add("past");
-        // console.log("Past status: " + cell10["data-time"] > currentHour);
+        console.log($(cell10).attr("data-time"));
+    } else if ($(cell10).attr("data-time") < currentHour) {
+        $(cell10).addClass("past");
+    } else if ($(cell10).attr("data-time") > currentHour) {
+        $(cell10).addClass("future");
+
     }
 };
 
