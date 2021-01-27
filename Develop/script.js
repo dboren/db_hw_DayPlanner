@@ -169,27 +169,30 @@ function renderEntry5() {
 
 // Color change function
 
-// function setColor(cell) {
-//     if (cell["data-time"] == currentHour) {
-//         cell10.setAttribute("class", ".present")
-//     } else if (cell["data-time"] < currentHour) {
-//         cell10.setAttribute("class", ".future");
-//     } else if (cell["data-time"] > currentHour) {
-//         cell10.setAttribute("class", ".past");
-//     }
-// };
-
-function setColor() {
-    if ($(cell10).attr("data-time") == currentHour) {
-        cell10.classList.add("present");
-        console.log($(cell10).attr("data-time"));
-    } else if ($(cell10).attr("data-time") < currentHour) {
-        $(cell10).addClass("past");
-    } else if ($(cell10).attr("data-time") > currentHour) {
-        $(cell10).addClass("future");
-
+function setColor(cell) {
+    if ($(cell).attr("data-time") == currentHour) {
+        $(cell).addClass("present");
+    } else if ($(cell).attr("data-time") < currentHour) {
+        $(cell).addClass("past");
+    } else if ($(cell).attr("data-time") > currentHour) {
+        $(cell).addClass("future");
     }
 };
+
+
+// Single cell test version
+
+// function setColor() {
+//     if ($(cell10).attr("data-time") == currentHour) {
+//         cell10.classList.add("present");
+//         console.log($(cell10).attr("data-time"));
+//     } else if ($(cell10).attr("data-time") < currentHour) {
+//         $(cell10).addClass("past");
+//     } else if ($(cell10).attr("data-time") > currentHour) {
+//         $(cell10).addClass("future");
+
+//     }
+// };
 
 
 function init() {
@@ -203,7 +206,15 @@ function init() {
     renderEntry4();
     renderEntry5();
 
-    setColor();
+    setColor(cell9);
+    setColor(cell10);
+    setColor(cell11);
+    setColor(cell12);
+    setColor(cell1);
+    setColor(cell2);
+    setColor(cell3);
+    setColor(cell4);
+    setColor(cell5);
 }
 
 init();
