@@ -231,6 +231,8 @@ console.log(cell10);
 
 // console.log("Past status: " + cell10["data-time"] > currentHour);
 
+//Event listeners
+
 $("#sv9").click(saveEntry9);
 $("#sv10").click(saveEntry10);
 $("#sv11").click(saveEntry11);
