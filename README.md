@@ -30,7 +30,7 @@ Depending on whether the cell's data-time value is less than, equal to, or great
 
 ### Reference
 
-![Screenshot of app in use](Assets\DayPlannerSC.JPG)
+![Screenshot of app in use](https://github.com/dboren/db_hw_DayPlanner/blob/main/Assets/DayPlannerSC.JPG?raw=true)
 
 
 Application can be found here: [https://dboren.github.io/db_hw_DayPlanner/](https://dboren.github.io/db_hw_DayPlanner/)
