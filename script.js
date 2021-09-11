@@ -170,7 +170,7 @@ function renderEntry5() {
 // Color change function
 
 function setColor(cell) {
-    currentHour = 15;
+    // currentHour = 15;
     if ($(cell).attr("data-time") == currentHour) {
         $(cell).addClass("present");
     } else if ($(cell).attr("data-time") < currentHour) {
